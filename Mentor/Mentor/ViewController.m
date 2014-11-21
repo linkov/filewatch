@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (strong) IBOutlet NSImageView *imageView;
+@property (strong, nonatomic) NSStatusItem *statusItem;
 
 @end
 
@@ -42,6 +43,39 @@
     self.imageView.image = images.firstObject;
 
     
+}
+
+- (void)setupTopMenu {
+
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+
+    // The text that will be shown in the menu bar
+    _statusItem.title = @"";
+
+    // The image that will be shown in the menu bar, a 16x16 black png works best
+    _statusItem.image = [NSImage imageNamed:@"feedbin-logo"];
+
+    // The highlighted image, use a white version of the normal image
+    _statusItem.alternateImage = [NSImage imageNamed:@"feedbin-logo-alt"];
+
+    // The image gets a blue background when the item is selected
+    _statusItem.highlightMode = YES;
+
+    NSMenu *menu = [[NSMenu alloc] init];
+    [menu addItemWithTitle:@"Open Feedbin" action:@selector(openApp:) keyEquivalent:@""];
+    [menu addItemWithTitle:@"Refresh" action:@selector(refreshApp:) keyEquivalent:@""];
+
+    [menu addItem:[NSMenuItem separatorItem]]; // A thin grey line
+    [menu addItemWithTitle:@"Quit Feedbin Notifier" action:@selector(terminate:) keyEquivalent:@""];
+    _statusItem.menu = menu;
+}
+
+- (void)openApp:(id)sender {
+
+}
+
+- (void)refreshApp:(id)sender {
+
 }
 
 - (void)setRepresentedObject:(id)representedObject {
