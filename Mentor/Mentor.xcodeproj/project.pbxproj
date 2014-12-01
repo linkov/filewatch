@@ -13,6 +13,8 @@
 		F1665A091A1E70AF00A1519D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1665A081A1E70AF00A1519D /* Images.xcassets */; };
 		F1665A0C1A1E70AF00A1519D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1665A0A1A1E70AF00A1519D /* Main.storyboard */; };
 		F1665A181A1E70AF00A1519D /* MentorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1665A171A1E70AF00A1519D /* MentorTests.m */; };
+		F18089BD1A2CDD6A00A701B7 /* NSImage+HHTint.m in Sources */ = {isa = PBXBuildFile; fileRef = F18089BC1A2CDD6A00A701B7 /* NSImage+HHTint.m */; };
+		F18089C01A2CE49B00A701B7 /* NSColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F18089BF1A2CE49B00A701B7 /* NSColor+Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,10 @@
 		F1665A111A1E70AF00A1519D /* MentorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1665A161A1E70AF00A1519D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1665A171A1E70AF00A1519D /* MentorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MentorTests.m; sourceTree = "<group>"; };
+		F18089BB1A2CDD6A00A701B7 /* NSImage+HHTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+HHTint.h"; sourceTree = "<group>"; };
+		F18089BC1A2CDD6A00A701B7 /* NSImage+HHTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+HHTint.m"; sourceTree = "<group>"; };
+		F18089BE1A2CE49B00A701B7 /* NSColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Util.h"; sourceTree = "<group>"; };
+		F18089BF1A2CE49B00A701B7 /* NSColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Util.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,10 @@
 		F16659FD1A1E70AF00A1519D /* Mentor */ = {
 			isa = PBXGroup;
 			children = (
+				F18089BE1A2CE49B00A701B7 /* NSColor+Util.h */,
+				F18089BF1A2CE49B00A701B7 /* NSColor+Util.m */,
+				F18089BB1A2CDD6A00A701B7 /* NSImage+HHTint.h */,
+				F18089BC1A2CDD6A00A701B7 /* NSImage+HHTint.m */,
 				F1665A001A1E70AF00A1519D /* AppDelegate.h */,
 				F1665A011A1E70AF00A1519D /* AppDelegate.m */,
 				F1665A051A1E70AF00A1519D /* ViewController.h */,
@@ -216,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1665A071A1E70AF00A1519D /* ViewController.m in Sources */,
+				F18089BD1A2CDD6A00A701B7 /* NSImage+HHTint.m in Sources */,
+				F18089C01A2CE49B00A701B7 /* NSColor+Util.m in Sources */,
 				F1665A041A1E70AF00A1519D /* main.m in Sources */,
 				F1665A021A1E70AF00A1519D /* AppDelegate.m in Sources */,
 			);
@@ -404,6 +416,7 @@
 				F1665A1D1A1E70AF00A1519D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1665A1E1A1E70AF00A1519D /* Build configuration list for PBXNativeTarget "MentorTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +425,7 @@
 				F1665A201A1E70AF00A1519D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -650,7 +650,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Mentor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -669,11 +669,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="253"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfS-aK-9fl">
-                                <rect key="frame" x="18" y="184" width="139" height="17"/>
+                                <rect key="frame" x="18" y="167" width="139" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select folder to watch" id="YCm-QW-JgD">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -681,39 +681,54 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zjM-lD-S2F">
-                                <rect key="frame" x="20" y="154" width="106" height="23"/>
+                                <rect key="frame" x="20" y="137" width="106" height="23"/>
                                 <buttonCell key="cell" type="smallSquare" title="Choose folder" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TIp-3w-rkB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="sendFileButtonAction:" target="XfG-lQ-9wD" id="o9c-k2-XC1"/>
+                                </connections>
                             </button>
-                            <box autoresizesSubviews="NO" fixedFrame="YES" title="selected folder" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="TZE-og-V0D">
-                                <rect key="frame" x="286" y="106" width="177" height="114"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QmF-C1-cxj">
+                                <rect key="frame" x="49" y="34" width="48" height="48"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="YOU-od-SWE"/>
+                            </imageView>
+                            <box autoresizesSubviews="NO" title="selected folder" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="TZE-og-V0D">
+                                <rect key="frame" x="286" y="106" width="177" height="97"/>
                                 <view key="contentView">
-                                    <rect key="frame" x="1" y="1" width="175" height="98"/>
+                                    <rect key="frame" x="1" y="1" width="175" height="81"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2u-4v-pmn">
-                                            <rect key="frame" x="56" y="34" width="63" height="34"/>
-                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Multiline Label" id="rNY-VN-vJJ">
-                                                <font key="font" metaFont="system"/>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2u-4v-pmn">
+                                            <rect key="frame" x="10" y="44" width="155" height="11"/>
+                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Watched folder empty" id="rNY-VN-vJJ">
+                                                <font key="font" metaFont="miniSystem"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="c2u-4v-pmn" firstAttribute="leading" secondItem="TZE-og-V0D" secondAttribute="leading" constant="10" id="5oF-RF-et4"/>
+                                    <constraint firstAttribute="trailing" secondItem="c2u-4v-pmn" secondAttribute="trailing" constant="10" id="R4P-hI-YbP"/>
+                                    <constraint firstAttribute="centerY" secondItem="c2u-4v-pmn" secondAttribute="centerY" id="WXG-Li-WqG"/>
+                                </constraints>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QmF-C1-cxj">
-                                <rect key="frame" x="49" y="51" width="48" height="48"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="YOU-od-SWE"/>
-                            </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TZE-og-V0D" secondAttribute="bottom" constant="110" id="Wik-yA-bRP"/>
+                            <constraint firstItem="TZE-og-V0D" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="50" id="cdl-fG-VPX"/>
+                            <constraint firstItem="TZE-og-V0D" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="289" id="jVs-2v-pie"/>
+                            <constraint firstAttribute="trailing" secondItem="TZE-og-V0D" secondAttribute="trailing" constant="20" id="vEn-ct-Fxv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="QmF-C1-cxj" id="d3h-VI-aGg"/>
+                        <outlet property="selectedFolderLabel" destination="c2u-4v-pmn" id="E2g-bS-tB8"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
