@@ -17,6 +17,7 @@
 @property (strong) NSURL *selectedFolderURL;
 @property (strong) NSTimer *scanTimer;
 @property (strong) IBOutlet NSTextField *selectedFolderLabel;
+@property (strong) NSMutableArray *shortListed;
 
 @end
 
@@ -26,7 +27,7 @@
     [super viewDidLoad];
 
     [self setupTopMenu];
-    
+
 }
 
 - (void)setupTopMenu {
@@ -80,7 +81,7 @@
         [self restartTimer];
 
     }
-    
+
 }
 
 - (NSString *)fileNameFromURL:(NSURL *)url {
@@ -89,74 +90,92 @@
 
 - (void)restartTimer {
 
-	[self.scanTimer invalidate];
-	self.scanTimer = nil;
-	[self scanFolder];
+    [self.scanTimer invalidate];
+    self.scanTimer = nil;
+    [self scanFolder];
 
-	self.scanTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(scanFolder) userInfo:nil repeats:YES];
+    self.scanTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(scanFolder) userInfo:nil repeats:YES];
 }
 
 - (void)scanFolder {
 
-    NSMutableArray *shortListed = [NSMutableArray array];
+    self.shortListed = [NSMutableArray array];
 
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [self openEachFileAt:[self fileNameFromURL:self.selectedFolderURL]];
 
-
-    NSArray *contents = [fileManager contentsOfDirectoryAtURL:self.selectedFolderURL
-                                   includingPropertiesForKeys:@[]
-                                                      options:NSDirectoryEnumerationSkipsHiddenFiles
-                                                        error:nil];
-
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"pathExtension == 'm'"];
-
-    for (NSURL *fileURL in [contents filteredArrayUsingPredicate:predicate]) {
-
-
-        NSString * fileAsString = [NSString stringWithContentsOfURL:fileURL encoding:NSUTF8StringEncoding error:nil];
-
-        NSRange searchRange = NSMakeRange(0,fileAsString.length);
-        NSRange foundRange;
-
-        while (searchRange.location < fileAsString.length) {
-
-            searchRange.length = fileAsString.length-searchRange.location;
-
-            foundRange = [fileAsString rangeOfString:@"\n{" options:NSCaseInsensitiveSearch range:searchRange];
-
-            if (foundRange.location != NSNotFound) {
-
-                searchRange.location = foundRange.location+foundRange.length;
-
-                NSUInteger numberOfLines, index, stringLength = searchRange.location;
-                for (index = 0, numberOfLines = 0; index < stringLength; numberOfLines++) {
-
-                    index = NSMaxRange([fileAsString lineRangeForRange:NSMakeRange(index, 0)]);
-                     NSLog(@"index - %lu",(unsigned long)index);
-
-                }
-
-                SDWCodeStyleCase *newCase = [SDWCodeStyleCase new];
-                newCase.type = @"Same line curlies";
-                newCase.fileName = [self fileNameFromURL:fileURL];
-                newCase.lineNumber = numberOfLines;
-                [shortListed addObject:newCase];
-
-
-            } else {
-
-                break;
-            }
-        }
-
-
-    }
-
-
-    [self updateMenuWithCases:shortListed];
-    [self updateMenuItemForCount:shortListed.count];
+    [self updateMenuWithCases:self.shortListed];
+    [self updateMenuItemForCount:self.shortListed.count];
 }
 
+-(void)openEachFileAt:(NSString *)path {
+
+    NSString *docsDir = [NSOpenStepRootDirectory() stringByAppendingPathComponent:path];
+
+    NSURL *file;
+    NSDirectoryEnumerator* enumerator = [[NSFileManager defaultManager] enumeratorAtURL:[NSURL URLWithString:docsDir] includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles|NSDirectoryEnumerationSkipsPackageDescendants errorHandler:nil];
+
+
+    while (file = [enumerator nextObject])
+    {
+        // check if it's a directory
+        BOOL isDirectory = NO;
+        NSString *filePath = file.absoluteString;
+
+        [[NSFileManager defaultManager] fileExistsAtPath: filePath
+                                             isDirectory: &isDirectory];
+        if (!isDirectory)
+        {
+
+            if ([file.pathExtension isEqualToString:@"m"]) {
+
+
+
+                NSString * fileAsString = [NSString stringWithContentsOfURL:file encoding:NSUTF8StringEncoding error:nil];
+
+                NSRange searchRange = NSMakeRange(0,fileAsString.length);
+                NSRange foundRange;
+
+                while (searchRange.location < fileAsString.length) {
+
+                    searchRange.length = fileAsString.length-searchRange.location;
+
+                    foundRange = [fileAsString rangeOfString:@"\n{" options:NSCaseInsensitiveSearch range:searchRange];
+
+                    if (foundRange.location != NSNotFound) {
+
+                        searchRange.location = foundRange.location+foundRange.length;
+
+                        NSUInteger numberOfLines, index, stringLength = searchRange.location;
+                        for (index = 0, numberOfLines = 0; index < stringLength; numberOfLines++) {
+
+                            index = NSMaxRange([fileAsString lineRangeForRange:NSMakeRange(index, 0)]);
+                            NSLog(@"index - %lu",(unsigned long)index);
+
+                        }
+
+                        SDWCodeStyleCase *newCase = [SDWCodeStyleCase new];
+                        newCase.type = @"Same line curlies";
+                        newCase.fileName = [self fileNameFromURL:file];
+                        newCase.lineNumber = numberOfLines;
+                        [self.shortListed addObject:newCase];
+
+
+                    } else {
+
+                        break;
+                    }
+                }
+
+
+            }
+        }
+        else
+        {
+            [self openEachFileAt:filePath];
+        }
+    }
+
+}
 
 
 - (void)updateMenuWithCases:(NSArray *)casses {
@@ -177,26 +196,26 @@
 
         NSMenuItem *item = [NSMenuItem new];
         item.attributedTitle = attributedMessage;
-
+        
         [self.statusItem.menu addItem:item];
     }
-
+    
 }
 
 - (void)updateMenuItemForCount:(NSUInteger)count {
-
+    
     if (count == 0) {
         self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor blackColor]];
     }
-
-    if (count < 3) {
-
+    
+    if (count < 3 && count > 0) {
+        
         self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"FFC000"]];
-
+        
     } else if (count >= 3 ) {
-
-      self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"C00000"]];
-
+        
+        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"C00000"]];
+        
     }
 }
 
