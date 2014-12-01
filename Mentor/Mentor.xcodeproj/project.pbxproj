@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		F1665A021A1E70AF00A1519D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1665A011A1E70AF00A1519D /* AppDelegate.m */; };
 		F1665A041A1E70AF00A1519D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1665A031A1E70AF00A1519D /* main.m */; };
-		F1665A071A1E70AF00A1519D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1665A061A1E70AF00A1519D /* ViewController.m */; };
 		F1665A091A1E70AF00A1519D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1665A081A1E70AF00A1519D /* Images.xcassets */; };
 		F1665A0C1A1E70AF00A1519D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1665A0A1A1E70AF00A1519D /* Main.storyboard */; };
 		F1665A181A1E70AF00A1519D /* MentorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1665A171A1E70AF00A1519D /* MentorTests.m */; };
-		F18089BD1A2CDD6A00A701B7 /* NSImage+HHTint.m in Sources */ = {isa = PBXBuildFile; fileRef = F18089BC1A2CDD6A00A701B7 /* NSImage+HHTint.m */; };
-		F18089C01A2CE49B00A701B7 /* NSColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F18089BF1A2CE49B00A701B7 /* NSColor+Util.m */; };
+		F16E7BBE1A2CFCC3009306F6 /* SDWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16E7BB81A2CFCC3009306F6 /* SDWMainViewController.m */; };
+		F16E7BBF1A2CFCC3009306F6 /* NSColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F16E7BBB1A2CFCC3009306F6 /* NSColor+Util.m */; };
+		F16E7BC01A2CFCC3009306F6 /* NSImage+HHTint.m in Sources */ = {isa = PBXBuildFile; fileRef = F16E7BBD1A2CFCC3009306F6 /* NSImage+HHTint.m */; };
+		F16E7BC31A2D040C009306F6 /* SDWCodeStyleCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F16E7BC21A2D040C009306F6 /* SDWCodeStyleCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,17 +34,19 @@
 		F1665A001A1E70AF00A1519D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1665A011A1E70AF00A1519D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F1665A031A1E70AF00A1519D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F1665A051A1E70AF00A1519D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F1665A061A1E70AF00A1519D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F1665A081A1E70AF00A1519D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F1665A0B1A1E70AF00A1519D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1665A111A1E70AF00A1519D /* MentorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1665A161A1E70AF00A1519D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1665A171A1E70AF00A1519D /* MentorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MentorTests.m; sourceTree = "<group>"; };
-		F18089BB1A2CDD6A00A701B7 /* NSImage+HHTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+HHTint.h"; sourceTree = "<group>"; };
-		F18089BC1A2CDD6A00A701B7 /* NSImage+HHTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+HHTint.m"; sourceTree = "<group>"; };
-		F18089BE1A2CE49B00A701B7 /* NSColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Util.h"; sourceTree = "<group>"; };
-		F18089BF1A2CE49B00A701B7 /* NSColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Util.m"; sourceTree = "<group>"; };
+		F16E7BB71A2CFCC3009306F6 /* SDWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWMainViewController.h; sourceTree = "<group>"; };
+		F16E7BB81A2CFCC3009306F6 /* SDWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWMainViewController.m; sourceTree = "<group>"; };
+		F16E7BBA1A2CFCC3009306F6 /* NSColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Util.h"; sourceTree = "<group>"; };
+		F16E7BBB1A2CFCC3009306F6 /* NSColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Util.m"; sourceTree = "<group>"; };
+		F16E7BBC1A2CFCC3009306F6 /* NSImage+HHTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+HHTint.h"; sourceTree = "<group>"; };
+		F16E7BBD1A2CFCC3009306F6 /* NSImage+HHTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+HHTint.m"; sourceTree = "<group>"; };
+		F16E7BC11A2D040C009306F6 /* SDWCodeStyleCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWCodeStyleCase.h; sourceTree = "<group>"; };
+		F16E7BC21A2D040C009306F6 /* SDWCodeStyleCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWCodeStyleCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,14 +88,10 @@
 		F16659FD1A1E70AF00A1519D /* Mentor */ = {
 			isa = PBXGroup;
 			children = (
-				F18089BE1A2CE49B00A701B7 /* NSColor+Util.h */,
-				F18089BF1A2CE49B00A701B7 /* NSColor+Util.m */,
-				F18089BB1A2CDD6A00A701B7 /* NSImage+HHTint.h */,
-				F18089BC1A2CDD6A00A701B7 /* NSImage+HHTint.m */,
+				F16E7BB51A2CFCC3009306F6 /* Classes */,
+				F16E7BB91A2CFCC3009306F6 /* Utils */,
 				F1665A001A1E70AF00A1519D /* AppDelegate.h */,
 				F1665A011A1E70AF00A1519D /* AppDelegate.m */,
-				F1665A051A1E70AF00A1519D /* ViewController.h */,
-				F1665A061A1E70AF00A1519D /* ViewController.m */,
 				F1665A081A1E70AF00A1519D /* Images.xcassets */,
 				F1665A0A1A1E70AF00A1519D /* Main.storyboard */,
 				F16659FE1A1E70AF00A1519D /* Supporting Files */,
@@ -124,6 +123,36 @@
 				F1665A161A1E70AF00A1519D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F16E7BB51A2CFCC3009306F6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F16E7BB61A2CFCC3009306F6 /* Models */,
+				F16E7BB71A2CFCC3009306F6 /* SDWMainViewController.h */,
+				F16E7BB81A2CFCC3009306F6 /* SDWMainViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F16E7BB61A2CFCC3009306F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F16E7BC11A2D040C009306F6 /* SDWCodeStyleCase.h */,
+				F16E7BC21A2D040C009306F6 /* SDWCodeStyleCase.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F16E7BB91A2CFCC3009306F6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F16E7BBA1A2CFCC3009306F6 /* NSColor+Util.h */,
+				F16E7BBB1A2CFCC3009306F6 /* NSColor+Util.m */,
+				F16E7BBC1A2CFCC3009306F6 /* NSImage+HHTint.h */,
+				F16E7BBD1A2CFCC3009306F6 /* NSImage+HHTint.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,10 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1665A071A1E70AF00A1519D /* ViewController.m in Sources */,
-				F18089BD1A2CDD6A00A701B7 /* NSImage+HHTint.m in Sources */,
-				F18089C01A2CE49B00A701B7 /* NSColor+Util.m in Sources */,
+				F16E7BBE1A2CFCC3009306F6 /* SDWMainViewController.m in Sources */,
 				F1665A041A1E70AF00A1519D /* main.m in Sources */,
+				F16E7BBF1A2CFCC3009306F6 /* NSColor+Util.m in Sources */,
+				F16E7BC31A2D040C009306F6 /* SDWCodeStyleCase.m in Sources */,
+				F16E7BC01A2CFCC3009306F6 /* NSImage+HHTint.m in Sources */,
 				F1665A021A1E70AF00A1519D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
