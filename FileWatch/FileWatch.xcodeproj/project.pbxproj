@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F19B85DF1A2D447200072EC2 /* FileWatch.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */; };
 		F19B85F31A2D449D00072EC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E11A2D449D00072EC2 /* AppDelegate.m */; };
-		F19B85F41A2D449D00072EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B85E31A2D449D00072EC2 /* Main.storyboard */; };
 		F19B85F51A2D449D00072EC2 /* SDWCodeStyleCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E81A2D449D00072EC2 /* SDWCodeStyleCase.m */; };
 		F19B85F61A2D449D00072EC2 /* SDWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85EA1A2D449D00072EC2 /* SDWMainViewController.m */; };
 		F19B85F71A2D449D00072EC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19B85EB1A2D449D00072EC2 /* Images.xcassets */; };
@@ -17,6 +16,7 @@
 		F19B85F91A2D449D00072EC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85ED1A2D449D00072EC2 /* main.m */; };
 		F19B85FA1A2D449D00072EC2 /* NSColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F01A2D449D00072EC2 /* NSColor+Util.m */; };
 		F19B85FB1A2D449D00072EC2 /* NSImage+HHTint.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F21A2D449D00072EC2 /* NSImage+HHTint.m */; };
+		F19B85FD1A2D45C600072EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B85FC1A2D45C600072EC2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FileWatch.entitlements; path = FileWatch/FileWatch.entitlements; sourceTree = SOURCE_ROOT; };
 		F19B85E01A2D449D00072EC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FileWatch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		F19B85E11A2D449D00072EC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FileWatch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		F19B85E41A2D449D00072EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		F19B85E71A2D449D00072EC2 /* SDWCodeStyleCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWCodeStyleCase.h; sourceTree = "<group>"; };
 		F19B85E81A2D449D00072EC2 /* SDWCodeStyleCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWCodeStyleCase.m; sourceTree = "<group>"; };
 		F19B85E91A2D449D00072EC2 /* SDWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWMainViewController.h; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		F19B85F01A2D449D00072EC2 /* NSColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Util.m"; sourceTree = "<group>"; };
 		F19B85F11A2D449D00072EC2 /* NSImage+HHTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+HHTint.h"; sourceTree = "<group>"; };
 		F19B85F21A2D449D00072EC2 /* NSImage+HHTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+HHTint.m"; sourceTree = "<group>"; };
+		F19B85FC1A2D45C600072EC2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = FileWatch/Main.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +70,7 @@
 			children = (
 				F19B85E01A2D449D00072EC2 /* AppDelegate.h */,
 				F19B85E11A2D449D00072EC2 /* AppDelegate.m */,
+				F19B85FC1A2D45C600072EC2 /* Main.storyboard */,
 				F19B85E21A2D449D00072EC2 /* Base.lproj */,
 				F19B85E51A2D449D00072EC2 /* Classes */,
 				F19B85EB1A2D449D00072EC2 /* Images.xcassets */,
@@ -84,7 +85,6 @@
 		F19B85E21A2D449D00072EC2 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				F19B85E31A2D449D00072EC2 /* Main.storyboard */,
 			);
 			name = Base.lproj;
 			path = FileWatch/Base.lproj;
@@ -187,7 +187,7 @@
 				F19B85F81A2D449D00072EC2 /* Info.plist in Resources */,
 				F19B85F71A2D449D00072EC2 /* Images.xcassets in Resources */,
 				F19B85DF1A2D447200072EC2 /* FileWatch.entitlements in Resources */,
-				F19B85F41A2D449D00072EC2 /* Main.storyboard in Resources */,
+				F19B85FD1A2D45C600072EC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,17 +208,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F19B85E31A2D449D00072EC2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F19B85E41A2D449D00072EC2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F1665A191A1E70AF00A1519D /* Debug */ = {
