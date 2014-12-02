@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F19B85DF1A2D447200072EC2 /* FileWatch.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */; };
-		F19B85F31A2D449D00072EC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E11A2D449D00072EC2 /* AppDelegate.m */; };
-		F19B85F51A2D449D00072EC2 /* SDWCodeStyleCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E81A2D449D00072EC2 /* SDWCodeStyleCase.m */; };
-		F19B85F61A2D449D00072EC2 /* SDWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85EA1A2D449D00072EC2 /* SDWMainViewController.m */; };
-		F19B85F71A2D449D00072EC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19B85EB1A2D449D00072EC2 /* Images.xcassets */; };
-		F19B85F81A2D449D00072EC2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19B85EC1A2D449D00072EC2 /* Info.plist */; };
-		F19B85F91A2D449D00072EC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85ED1A2D449D00072EC2 /* main.m */; };
-		F19B85FA1A2D449D00072EC2 /* NSColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F01A2D449D00072EC2 /* NSColor+Util.m */; };
-		F19B85FB1A2D449D00072EC2 /* NSImage+HHTint.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F21A2D449D00072EC2 /* NSImage+HHTint.m */; };
-		F19B85FD1A2D45C600072EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B85FC1A2D45C600072EC2 /* Main.storyboard */; };
+		F11449211A2D47F900A57DEF /* SDWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85EA1A2D449D00072EC2 /* SDWMainViewController.m */; };
+		F11449221A2D47F900A57DEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E11A2D449D00072EC2 /* AppDelegate.m */; };
+		F11449231A2D47F900A57DEF /* NSColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F01A2D449D00072EC2 /* NSColor+Util.m */; };
+		F11449241A2D47F900A57DEF /* NSImage+HHTint.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F21A2D449D00072EC2 /* NSImage+HHTint.m */; };
+		F11449251A2D47F900A57DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85ED1A2D449D00072EC2 /* main.m */; };
+		F11449261A2D47F900A57DEF /* SDWCodeStyleCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E81A2D449D00072EC2 /* SDWCodeStyleCase.m */; };
+		F11449291A2D47F900A57DEF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19B85EC1A2D449D00072EC2 /* Info.plist */; };
+		F114492A1A2D47F900A57DEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19B85EB1A2D449D00072EC2 /* Images.xcassets */; };
+		F114492B1A2D47F900A57DEF /* FileWatch.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */; };
+		F114492C1A2D47F900A57DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B85FC1A2D45C600072EC2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F16659FB1A1E70AF00A1519D /* File Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "File Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11449301A2D47F900A57DEF /* Filewatch copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filewatch copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11449311A2D47F900A57DEF /* Filewatch copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Filewatch copy-Info.plist"; path = "/Users/linkov/Documents/sdwr/filewatch/FileWatch/Filewatch copy-Info.plist"; sourceTree = "<absolute>"; };
 		F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FileWatch.entitlements; path = FileWatch/FileWatch.entitlements; sourceTree = SOURCE_ROOT; };
 		F19B85E01A2D449D00072EC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FileWatch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		F19B85E11A2D449D00072EC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FileWatch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -39,7 +40,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F16659F81A1E70AF00A1519D /* Frameworks */ = {
+		F11449271A2D47F900A57DEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,13 +55,14 @@
 			children = (
 				F16659FD1A1E70AF00A1519D /* Mentor */,
 				F16659FC1A1E70AF00A1519D /* Products */,
+				F11449311A2D47F900A57DEF /* Filewatch copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		F16659FC1A1E70AF00A1519D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F16659FB1A1E70AF00A1519D /* File Watch.app */,
+				F11449301A2D47F900A57DEF /* Filewatch copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,21 +127,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F16659FA1A1E70AF00A1519D /* FileWatch */ = {
+		F114491F1A2D47F900A57DEF /* Filewatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1665A1B1A1E70AF00A1519D /* Build configuration list for PBXNativeTarget "FileWatch" */;
+			buildConfigurationList = F114492D1A2D47F900A57DEF /* Build configuration list for PBXNativeTarget "Filewatch" */;
 			buildPhases = (
-				F16659F71A1E70AF00A1519D /* Sources */,
-				F16659F81A1E70AF00A1519D /* Frameworks */,
-				F16659F91A1E70AF00A1519D /* Resources */,
+				F11449201A2D47F900A57DEF /* Sources */,
+				F11449271A2D47F900A57DEF /* Frameworks */,
+				F11449281A2D47F900A57DEF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FileWatch;
+			name = Filewatch;
 			productName = Mentor;
-			productReference = F16659FB1A1E70AF00A1519D /* File Watch.app */;
+			productReference = F11449301A2D47F900A57DEF /* Filewatch copy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,18 +152,8 @@
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = SDWR;
-				TargetAttributes = {
-					F16659FA1A1E70AF00A1519D = {
-						CreatedOnToolsVersion = 6.1;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
-					};
-				};
 			};
-			buildConfigurationList = F16659F61A1E70AF00A1519D /* Build configuration list for PBXProject "FileWatch" */;
+			buildConfigurationList = F16659F61A1E70AF00A1519D /* Build configuration list for PBXProject "Filewatch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -174,42 +166,66 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F16659FA1A1E70AF00A1519D /* FileWatch */,
+				F114491F1A2D47F900A57DEF /* Filewatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F16659F91A1E70AF00A1519D /* Resources */ = {
+		F11449281A2D47F900A57DEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F19B85F81A2D449D00072EC2 /* Info.plist in Resources */,
-				F19B85F71A2D449D00072EC2 /* Images.xcassets in Resources */,
-				F19B85DF1A2D447200072EC2 /* FileWatch.entitlements in Resources */,
-				F19B85FD1A2D45C600072EC2 /* Main.storyboard in Resources */,
+				F11449291A2D47F900A57DEF /* Info.plist in Resources */,
+				F114492A1A2D47F900A57DEF /* Images.xcassets in Resources */,
+				F114492B1A2D47F900A57DEF /* FileWatch.entitlements in Resources */,
+				F114492C1A2D47F900A57DEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F16659F71A1E70AF00A1519D /* Sources */ = {
+		F11449201A2D47F900A57DEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F19B85F61A2D449D00072EC2 /* SDWMainViewController.m in Sources */,
-				F19B85F31A2D449D00072EC2 /* AppDelegate.m in Sources */,
-				F19B85FA1A2D449D00072EC2 /* NSColor+Util.m in Sources */,
-				F19B85FB1A2D449D00072EC2 /* NSImage+HHTint.m in Sources */,
-				F19B85F91A2D449D00072EC2 /* main.m in Sources */,
-				F19B85F51A2D449D00072EC2 /* SDWCodeStyleCase.m in Sources */,
+				F11449211A2D47F900A57DEF /* SDWMainViewController.m in Sources */,
+				F11449221A2D47F900A57DEF /* AppDelegate.m in Sources */,
+				F11449231A2D47F900A57DEF /* NSColor+Util.m in Sources */,
+				F11449241A2D47F900A57DEF /* NSImage+HHTint.m in Sources */,
+				F11449251A2D47F900A57DEF /* main.m in Sources */,
+				F11449261A2D47F900A57DEF /* SDWCodeStyleCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F114492E1A2D47F900A57DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FileWatch/FileWatch.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Filewatch copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "Filewatch copy";
+			};
+			name = Debug;
+		};
+		F114492F1A2D47F900A57DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FileWatch/FileWatch.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Filewatch copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "Filewatch copy";
+			};
+			name = Release;
+		};
 		F1665A191A1E70AF00A1519D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -286,47 +302,23 @@
 			};
 			name = Release;
 		};
-		F1665A1C1A1E70AF00A1519D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = FileWatch/FileWatch.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FileWatch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "File Watch";
-			};
-			name = Debug;
-		};
-		F1665A1D1A1E70AF00A1519D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = FileWatch/FileWatch.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FileWatch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "File Watch";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F16659F61A1E70AF00A1519D /* Build configuration list for PBXProject "FileWatch" */ = {
+		F114492D1A2D47F900A57DEF /* Build configuration list for PBXNativeTarget "Filewatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1665A191A1E70AF00A1519D /* Debug */,
-				F1665A1A1A1E70AF00A1519D /* Release */,
+				F114492E1A2D47F900A57DEF /* Debug */,
+				F114492F1A2D47F900A57DEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1665A1B1A1E70AF00A1519D /* Build configuration list for PBXNativeTarget "FileWatch" */ = {
+		F16659F61A1E70AF00A1519D /* Build configuration list for PBXProject "Filewatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1665A1C1A1E70AF00A1519D /* Debug */,
-				F1665A1D1A1E70AF00A1519D /* Release */,
+				F1665A191A1E70AF00A1519D /* Debug */,
+				F1665A1A1A1E70AF00A1519D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
