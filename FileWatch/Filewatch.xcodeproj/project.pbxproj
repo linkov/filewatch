@@ -20,6 +20,7 @@
 		F11449341A2E167C00A57DEF /* SDWLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449331A2E167C00A57DEF /* SDWLeftMenuVC.m */; };
 		F11449371A2E397100A57DEF /* SDWRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449361A2E397100A57DEF /* SDWRecipe.m */; };
 		F114493A1A2E3A2A00A57DEF /* SDWRecipeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449391A2E3A2A00A57DEF /* SDWRecipeCategory.m */; };
+		F114493F1A2E4CBA00A57DEF /* JWCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F114493E1A2E4CBA00A57DEF /* JWCTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		F11449361A2E397100A57DEF /* SDWRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWRecipe.m; sourceTree = "<group>"; };
 		F11449381A2E3A2A00A57DEF /* SDWRecipeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWRecipeCategory.h; sourceTree = "<group>"; };
 		F11449391A2E3A2A00A57DEF /* SDWRecipeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWRecipeCategory.m; sourceTree = "<group>"; };
+		F114493D1A2E4CBA00A57DEF /* JWCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCTableView.h; sourceTree = "<group>"; };
+		F114493E1A2E4CBA00A57DEF /* JWCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCTableView.m; sourceTree = "<group>"; };
 		F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FileWatch.entitlements; path = FileWatch/FileWatch.entitlements; sourceTree = SOURCE_ROOT; };
 		F19B85E01A2D449D00072EC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FileWatch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		F19B85E11A2D449D00072EC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FileWatch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -58,9 +61,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F114493B1A2E4CBA00A57DEF /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F114493C1A2E4CBA00A57DEF /* JWCTableView */,
+			);
+			name = Vendor;
+			path = ../Vendor;
+			sourceTree = "<group>";
+		};
+		F114493C1A2E4CBA00A57DEF /* JWCTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F114493D1A2E4CBA00A57DEF /* JWCTableView.h */,
+				F114493E1A2E4CBA00A57DEF /* JWCTableView.m */,
+			);
+			path = JWCTableView;
+			sourceTree = "<group>";
+		};
 		F16659F21A1E70AF00A1519D = {
 			isa = PBXGroup;
 			children = (
+				F114493B1A2E4CBA00A57DEF /* Vendor */,
 				F16659FD1A1E70AF00A1519D /* FileWatch */,
 				F16659FC1A1E70AF00A1519D /* Products */,
 			);
@@ -206,6 +228,7 @@
 			files = (
 				F11449211A2D47F900A57DEF /* SDWMainPanelVC.m in Sources */,
 				F11449221A2D47F900A57DEF /* AppDelegate.m in Sources */,
+				F114493F1A2E4CBA00A57DEF /* JWCTableView.m in Sources */,
 				F11449231A2D47F900A57DEF /* NSColor+Util.m in Sources */,
 				F11449341A2E167C00A57DEF /* SDWLeftMenuVC.m in Sources */,
 				F114493A1A2E3A2A00A57DEF /* SDWRecipeCategory.m in Sources */,
