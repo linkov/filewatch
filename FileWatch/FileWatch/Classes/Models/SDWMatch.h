@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SDWCodeStyleCase : NSObject
+@interface SDWMatch : NSObject
 
 @property (strong) NSString *type;
 @property (strong) NSString *fileName;

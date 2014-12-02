@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SDWMainViewController : NSViewController
+@interface SDWMainPanelVC : NSViewController
 
 
 @end

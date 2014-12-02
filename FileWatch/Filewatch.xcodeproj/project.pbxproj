@@ -7,27 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F11449211A2D47F900A57DEF /* SDWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85EA1A2D449D00072EC2 /* SDWMainViewController.m */; };
+		F11449211A2D47F900A57DEF /* SDWMainPanelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85EA1A2D449D00072EC2 /* SDWMainPanelVC.m */; };
 		F11449221A2D47F900A57DEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E11A2D449D00072EC2 /* AppDelegate.m */; };
 		F11449231A2D47F900A57DEF /* NSColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F01A2D449D00072EC2 /* NSColor+Util.m */; };
 		F11449241A2D47F900A57DEF /* NSImage+HHTint.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85F21A2D449D00072EC2 /* NSImage+HHTint.m */; };
 		F11449251A2D47F900A57DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85ED1A2D449D00072EC2 /* main.m */; };
-		F11449261A2D47F900A57DEF /* SDWCodeStyleCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E81A2D449D00072EC2 /* SDWCodeStyleCase.m */; };
+		F11449261A2D47F900A57DEF /* SDWMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B85E81A2D449D00072EC2 /* SDWMatch.m */; };
 		F11449291A2D47F900A57DEF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19B85EC1A2D449D00072EC2 /* Info.plist */; };
 		F114492A1A2D47F900A57DEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19B85EB1A2D449D00072EC2 /* Images.xcassets */; };
 		F114492B1A2D47F900A57DEF /* FileWatch.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */; };
 		F114492C1A2D47F900A57DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19B85FC1A2D45C600072EC2 /* Main.storyboard */; };
+		F11449341A2E167C00A57DEF /* SDWLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449331A2E167C00A57DEF /* SDWLeftMenuVC.m */; };
+		F11449371A2E397100A57DEF /* SDWRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449361A2E397100A57DEF /* SDWRecipe.m */; };
+		F114493A1A2E3A2A00A57DEF /* SDWRecipeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449391A2E3A2A00A57DEF /* SDWRecipeCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F11449301A2D47F900A57DEF /* Filewatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filewatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11449321A2E167C00A57DEF /* SDWLeftMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWLeftMenuVC.h; sourceTree = "<group>"; };
+		F11449331A2E167C00A57DEF /* SDWLeftMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWLeftMenuVC.m; sourceTree = "<group>"; };
+		F11449351A2E397100A57DEF /* SDWRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWRecipe.h; sourceTree = "<group>"; };
+		F11449361A2E397100A57DEF /* SDWRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWRecipe.m; sourceTree = "<group>"; };
+		F11449381A2E3A2A00A57DEF /* SDWRecipeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWRecipeCategory.h; sourceTree = "<group>"; };
+		F11449391A2E3A2A00A57DEF /* SDWRecipeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWRecipeCategory.m; sourceTree = "<group>"; };
 		F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FileWatch.entitlements; path = FileWatch/FileWatch.entitlements; sourceTree = SOURCE_ROOT; };
 		F19B85E01A2D449D00072EC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FileWatch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		F19B85E11A2D449D00072EC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FileWatch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		F19B85E71A2D449D00072EC2 /* SDWCodeStyleCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWCodeStyleCase.h; sourceTree = "<group>"; };
-		F19B85E81A2D449D00072EC2 /* SDWCodeStyleCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWCodeStyleCase.m; sourceTree = "<group>"; };
-		F19B85E91A2D449D00072EC2 /* SDWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWMainViewController.h; sourceTree = "<group>"; };
-		F19B85EA1A2D449D00072EC2 /* SDWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWMainViewController.m; sourceTree = "<group>"; };
+		F19B85E71A2D449D00072EC2 /* SDWMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWMatch.h; sourceTree = "<group>"; };
+		F19B85E81A2D449D00072EC2 /* SDWMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWMatch.m; sourceTree = "<group>"; };
+		F19B85E91A2D449D00072EC2 /* SDWMainPanelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWMainPanelVC.h; sourceTree = "<group>"; };
+		F19B85EA1A2D449D00072EC2 /* SDWMainPanelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWMainPanelVC.m; sourceTree = "<group>"; };
 		F19B85EB1A2D449D00072EC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FileWatch/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		F19B85EC1A2D449D00072EC2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FileWatch/Info.plist; sourceTree = SOURCE_ROOT; };
 		F19B85ED1A2D449D00072EC2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FileWatch/main.m; sourceTree = SOURCE_ROOT; };
@@ -95,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				F19B85E61A2D449D00072EC2 /* Models */,
-				F19B85E91A2D449D00072EC2 /* SDWMainViewController.h */,
-				F19B85EA1A2D449D00072EC2 /* SDWMainViewController.m */,
+				F19B85E91A2D449D00072EC2 /* SDWMainPanelVC.h */,
+				F19B85EA1A2D449D00072EC2 /* SDWMainPanelVC.m */,
+				F11449321A2E167C00A57DEF /* SDWLeftMenuVC.h */,
+				F11449331A2E167C00A57DEF /* SDWLeftMenuVC.m */,
 			);
 			name = Classes;
 			path = FileWatch/Classes;
@@ -105,8 +116,12 @@
 		F19B85E61A2D449D00072EC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F19B85E71A2D449D00072EC2 /* SDWCodeStyleCase.h */,
-				F19B85E81A2D449D00072EC2 /* SDWCodeStyleCase.m */,
+				F11449381A2E3A2A00A57DEF /* SDWRecipeCategory.h */,
+				F11449391A2E3A2A00A57DEF /* SDWRecipeCategory.m */,
+				F11449351A2E397100A57DEF /* SDWRecipe.h */,
+				F11449361A2E397100A57DEF /* SDWRecipe.m */,
+				F19B85E71A2D449D00072EC2 /* SDWMatch.h */,
+				F19B85E81A2D449D00072EC2 /* SDWMatch.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,12 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11449211A2D47F900A57DEF /* SDWMainViewController.m in Sources */,
+				F11449211A2D47F900A57DEF /* SDWMainPanelVC.m in Sources */,
 				F11449221A2D47F900A57DEF /* AppDelegate.m in Sources */,
 				F11449231A2D47F900A57DEF /* NSColor+Util.m in Sources */,
+				F11449341A2E167C00A57DEF /* SDWLeftMenuVC.m in Sources */,
+				F114493A1A2E3A2A00A57DEF /* SDWRecipeCategory.m in Sources */,
+				F11449371A2E397100A57DEF /* SDWRecipe.m in Sources */,
 				F11449241A2D47F900A57DEF /* NSImage+HHTint.m in Sources */,
 				F11449251A2D47F900A57DEF /* main.m in Sources */,
-				F11449261A2D47F900A57DEF /* SDWCodeStyleCase.m in Sources */,
+				F11449261A2D47F900A57DEF /* SDWMatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

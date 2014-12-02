@@ -5,12 +5,12 @@
 //  Created by alex on 11/20/14.
 //  Copyright (c) 2014 SDWR. All rights reserved.
 //
-#import "SDWCodeStyleCase.h"
+#import "SDWMatch.h"
 #import "NSImage+HHTint.h"
-#import "SDWMainViewController.h"
+#import "SDWMainPanelVC.h"
 #import "NSColor+Util.h"
 
-@interface SDWMainViewController ()
+@interface SDWMainPanelVC ()
 
 @property (strong) IBOutlet NSImageView *imageView;
 @property (strong, nonatomic) NSStatusItem *statusItem;
@@ -26,29 +26,21 @@
 
 @end
 
-@implementation SDWMainViewController
+@implementation SDWMainPanelVC
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
-
     [self setupTopMenu];
-
 }
 
 - (void)setupTopMenu {
 
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-
-    // The text that will be shown in the menu bar
     _statusItem.title = @"";
 
-    // The image that will be shown in the menu bar, a 16x16 black png works best
     _statusItem.image = [NSImage imageNamed:@"menuItem"];
-
-    // The highlighted image, use a white version of the normal image
     _statusItem.alternateImage = [NSImage imageNamed:@"menuItemWhite"];
-
-    // The image gets a blue background when the item is selected
     _statusItem.highlightMode = YES;
 
     NSMenu *menu = [[NSMenu alloc] init];
@@ -157,7 +149,7 @@
 
                         }
 
-                        SDWCodeStyleCase *newCase = [SDWCodeStyleCase new];
+                        SDWMatch *newCase = [SDWMatch new];
                         newCase.fileName = [self fileNameFromURL:file];
                         newCase.lineNumber = numberOfLines;
                         [self.shortListed addObject:newCase];
@@ -185,7 +177,7 @@
 
     [self.statusItem.menu removeAllItems];
 
-    for (SDWCodeStyleCase *aCase in casses) {
+    for (SDWMatch *aCase in casses) {
 
         NSDictionary *attributes = @{ NSForegroundColorAttributeName:[NSColor blackColor], NSFontAttributeName: [NSFont fontWithName:@"DINPro-Bold" size:10] };
         NSMutableAttributedString *attributedMessage = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ - line %lu",aCase.fileName,aCase.lineNumber]];
@@ -198,7 +190,6 @@
         
         [self.statusItem.menu addItem:item];
     }
-
 
     [self addStandardMenuOptions];
 }
@@ -227,22 +218,5 @@
 
     }
 }
-
-//- (void)updateMenuItemForCount:(NSUInteger)count {
-//
-//    if (count == 0) {
-//        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor blackColor]];
-//    }
-//
-//    if (count < 3 && count > 0) {
-//
-//        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"FFC000"]];
-//
-//    } else if (count >= 3 ) {
-//
-//        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"C00000"]];
-//
-//    }
-//}
 
 @end

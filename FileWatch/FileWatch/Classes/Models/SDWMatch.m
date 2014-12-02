@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 SDWR. All rights reserved.
 //
 
-#import "SDWCodeStyleCase.h"
+#import "SDWMatch.h"
 
-@implementation SDWCodeStyleCase
+@implementation SDWMatch
 
 @end
