@@ -53,20 +53,18 @@
 
     NSMenu *menu = [[NSMenu alloc] init];
     _statusItem.menu = menu;
+
+    [self addStandardMenuOptions];
 }
 
-- (void)openApp:(id)sender {
+- (void)openSettings:(id)sender {
 
+    
 }
 
-- (void)refreshApp:(id)sender {
+- (void)quitApp:(id)sender {
 
-}
-
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
+    [[NSApplication sharedApplication] terminate:nil];
 }
 
 
@@ -200,7 +198,17 @@
         
         [self.statusItem.menu addItem:item];
     }
-    
+
+
+    [self addStandardMenuOptions];
+}
+
+- (void)addStandardMenuOptions {
+
+    [self.statusItem.menu addItemWithTitle:@"Open Settings" action:@selector(openSettings:) keyEquivalent:@""];
+    [self.statusItem.menu addItemWithTitle:@"Quit" action:@selector(quitApp:) keyEquivalent:@""];
+
+    [self.statusItem.menu.itemArray makeObjectsPerformSelector:@selector(setTarget:) withObject:self];
 }
 
 - (void)updateMenuItemForCount:(NSUInteger)count {
