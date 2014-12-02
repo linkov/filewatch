@@ -20,8 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F11449301A2D47F900A57DEF /* Filewatch copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filewatch copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F11449311A2D47F900A57DEF /* Filewatch copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Filewatch copy-Info.plist"; path = "/Users/linkov/Documents/sdwr/filewatch/FileWatch/Filewatch copy-Info.plist"; sourceTree = "<absolute>"; };
+		F11449301A2D47F900A57DEF /* Filewatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filewatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FileWatch.entitlements; path = FileWatch/FileWatch.entitlements; sourceTree = SOURCE_ROOT; };
 		F19B85E01A2D449D00072EC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FileWatch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		F19B85E11A2D449D00072EC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FileWatch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -53,21 +52,20 @@
 		F16659F21A1E70AF00A1519D = {
 			isa = PBXGroup;
 			children = (
-				F16659FD1A1E70AF00A1519D /* Mentor */,
+				F16659FD1A1E70AF00A1519D /* FileWatch */,
 				F16659FC1A1E70AF00A1519D /* Products */,
-				F11449311A2D47F900A57DEF /* Filewatch copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		F16659FC1A1E70AF00A1519D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F11449301A2D47F900A57DEF /* Filewatch copy.app */,
+				F11449301A2D47F900A57DEF /* Filewatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F16659FD1A1E70AF00A1519D /* Mentor */ = {
+		F16659FD1A1E70AF00A1519D /* FileWatch */ = {
 			isa = PBXGroup;
 			children = (
 				F19B85E01A2D449D00072EC2 /* AppDelegate.h */,
@@ -81,6 +79,7 @@
 				F19B85EE1A2D449D00072EC2 /* Utils */,
 				F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */,
 			);
+			name = FileWatch;
 			path = Mentor;
 			sourceTree = "<group>";
 		};
@@ -141,7 +140,7 @@
 			);
 			name = Filewatch;
 			productName = Mentor;
-			productReference = F11449301A2D47F900A57DEF /* Filewatch copy.app */;
+			productReference = F11449301A2D47F900A57DEF /* Filewatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,9 +207,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FileWatch/FileWatch.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Filewatch copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FileWatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "Filewatch copy";
+				PRODUCT_NAME = Filewatch;
 			};
 			name = Debug;
 		};
@@ -220,9 +219,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FileWatch/FileWatch.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Filewatch copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FileWatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "Filewatch copy";
+				PRODUCT_NAME = Filewatch;
 			};
 			name = Release;
 		};
