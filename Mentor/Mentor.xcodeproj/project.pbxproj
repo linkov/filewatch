@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F16659FB1A1E70AF00A1519D /* Mentor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mentor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16659FB1A1E70AF00A1519D /* File Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "File Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16659FF1A1E70AF00A1519D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1665A001A1E70AF00A1519D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1665A011A1E70AF00A1519D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,6 +47,7 @@
 		F16E7BBD1A2CFCC3009306F6 /* NSImage+HHTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+HHTint.m"; sourceTree = "<group>"; };
 		F16E7BC11A2D040C009306F6 /* SDWCodeStyleCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWCodeStyleCase.h; sourceTree = "<group>"; };
 		F16E7BC21A2D040C009306F6 /* SDWCodeStyleCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWCodeStyleCase.m; sourceTree = "<group>"; };
+		F16E7BC41A2D28C3009306F6 /* Mentor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mentor.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +80,7 @@
 		F16659FC1A1E70AF00A1519D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F16659FB1A1E70AF00A1519D /* Mentor.app */,
+				F16659FB1A1E70AF00A1519D /* File Watch.app */,
 				F1665A111A1E70AF00A1519D /* MentorTests.xctest */,
 			);
 			name = Products;
@@ -88,6 +89,7 @@
 		F16659FD1A1E70AF00A1519D /* Mentor */ = {
 			isa = PBXGroup;
 			children = (
+				F16E7BC41A2D28C3009306F6 /* Mentor.entitlements */,
 				F16E7BB51A2CFCC3009306F6 /* Classes */,
 				F16E7BB91A2CFCC3009306F6 /* Utils */,
 				F1665A001A1E70AF00A1519D /* AppDelegate.h */,
@@ -172,7 +174,7 @@
 			);
 			name = Mentor;
 			productName = Mentor;
-			productReference = F16659FB1A1E70AF00A1519D /* Mentor.app */;
+			productReference = F16659FB1A1E70AF00A1519D /* File Watch.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F1665A101A1E70AF00A1519D /* MentorTests */ = {
@@ -204,6 +206,11 @@
 				TargetAttributes = {
 					F16659FA1A1E70AF00A1519D = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					F1665A101A1E70AF00A1519D = {
 						CreatedOnToolsVersion = 6.1;
@@ -373,10 +380,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mentor/Mentor.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Mentor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "File Watch";
 			};
 			name = Debug;
 		};
@@ -384,10 +392,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Mentor/Mentor.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Mentor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "File Watch";
 			};
 			name = Release;
 		};

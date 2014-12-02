@@ -18,6 +18,11 @@
 @property (strong) NSTimer *scanTimer;
 @property (strong) IBOutlet NSTextField *selectedFolderLabel;
 @property (strong) NSMutableArray *shortListed;
+@property (strong) IBOutlet NSTextField *regexField;
+@property (strong) IBOutlet NSTextField *offField;
+@property (strong) IBOutlet NSTextField *amberField;
+@property (strong) IBOutlet NSTextField *redField;
+@property (strong) IBOutlet NSTextField *extensionField;
 
 @end
 
@@ -126,7 +131,7 @@
         if (!isDirectory)
         {
 
-            if ([file.pathExtension isEqualToString:@"m"]) {
+            if ([file.pathExtension isEqualToString:self.extensionField.stringValue]) {
 
 
 
@@ -139,7 +144,8 @@
 
                     searchRange.length = fileAsString.length-searchRange.location;
 
-                    foundRange = [fileAsString rangeOfString:@"\n{" options:NSCaseInsensitiveSearch range:searchRange];
+                    NSString *regEx = self.regexField.stringValue;
+                    foundRange = [fileAsString rangeOfString:regEx options:NSRegularExpressionSearch range:searchRange];
 
                     if (foundRange.location != NSNotFound) {
 
@@ -154,7 +160,6 @@
                         }
 
                         SDWCodeStyleCase *newCase = [SDWCodeStyleCase new];
-                        newCase.type = @"Same line curlies";
                         newCase.fileName = [self fileNameFromURL:file];
                         newCase.lineNumber = numberOfLines;
                         [self.shortListed addObject:newCase];
@@ -180,18 +185,14 @@
 
 - (void)updateMenuWithCases:(NSArray *)casses {
 
-    //NSString *string;
-
     [self.statusItem.menu removeAllItems];
 
     for (SDWCodeStyleCase *aCase in casses) {
 
         NSDictionary *attributes = @{ NSForegroundColorAttributeName:[NSColor blackColor], NSFontAttributeName: [NSFont fontWithName:@"DINPro-Bold" size:10] };
-        NSMutableAttributedString *attributedMessage = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ - %@ - line %lu",aCase.type,aCase.fileName,aCase.lineNumber]];
+        NSMutableAttributedString *attributedMessage = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ - line %lu",aCase.fileName,aCase.lineNumber]];
 
         [attributedMessage setAttributes:attributes range:NSMakeRange(0, attributedMessage.string.length)];
-
-
 
 
         NSMenuItem *item = [NSMenuItem new];
@@ -203,20 +204,37 @@
 }
 
 - (void)updateMenuItemForCount:(NSUInteger)count {
-    
-    if (count == 0) {
+
+    if (count >= [self.offField.stringValue integerValue] && count < [self.amberField.stringValue integerValue]) {
         self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor blackColor]];
     }
-    
-    if (count < 3 && count > 0) {
-        
+
+    if (count >= [self.amberField.stringValue integerValue] && count < [self.redField.stringValue integerValue]) {
+
         self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"FFC000"]];
-        
-    } else if (count >= 3 ) {
-        
+
+    } else if (count >= [self.redField.stringValue integerValue] ) {
+
         self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"C00000"]];
-        
+
     }
 }
+
+//- (void)updateMenuItemForCount:(NSUInteger)count {
+//
+//    if (count == 0) {
+//        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor blackColor]];
+//    }
+//
+//    if (count < 3 && count > 0) {
+//
+//        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"FFC000"]];
+//
+//    } else if (count >= 3 ) {
+//
+//        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"C00000"]];
+//
+//    }
+//}
 
 @end
