@@ -30,7 +30,37 @@
     return self;
 }
 
+#pragma mark - Drag&Drop
+
+- (NSString *)objectIDForRow:(NSUInteger)row {
+
+    return nil;
+}
+
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
+{
+    // Copy the row numbers to the pasteboard.
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[self objectIDForRow:rowIndexes.firstIndex]];
+    //   [pboard declareTypes:[NSArray arrayWithObject:@".gif"] owner:self];
+    [pboard setData:data forType:@"com.sdwr.filewatch.drag"];
+    return YES;
+}
+
+- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
+
+    return NSDragOperationNone;
+}
+
+//
+- (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id <NSDraggingInfo>)info
+              row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation {
+
+    return NO;
+}
+
+
 #pragma mark NSTableViewDataSource methods
+
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {

@@ -51,7 +51,12 @@
     self.sectionKeys = keys;
     self.sectionContents = contents;
 
+    [self.tableView registerForDraggedTypes:@[@"com.sdwr.filewatch.drag"]];
+    self.tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
+
 }
+
+
 
 - (NSArray *)seededRecipiesGeneral {
 
@@ -123,15 +128,12 @@
 
 //Height related
 -(CGFloat)tableView:(NSTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     return 60;
 }
 
 -(CGFloat)tableView:(NSTableView *)tableView heightForHeaderViewForSection:(NSInteger)section {
-
     return 30;
 }
-
 
 -(NSView *)tableView:(NSTableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
@@ -145,7 +147,6 @@
 
 -(NSView *)tableView:(NSTableView *)tableView viewForIndexPath:(NSIndexPath *)indexPath {
 
-
     NSString *key = [[self sectionKeys] objectAtIndex:[indexPath section]];
     NSArray *contents = [[self sectionContents] objectForKey:key];
     SDWRecipe *recipe = [contents objectAtIndex:[indexPath row]];
@@ -156,6 +157,11 @@
     resultView.textField.textColor = [NSColor darkGrayColor];
 
     return resultView;
+}
+
+- (NSString *)objectIDForRow:(NSUInteger)row {
+
+    return @"test";
 }
 
 @end

@@ -70,10 +70,33 @@
 
     [self.layer addSublayer:self.backgroundLayer];
 
-    [self toggleAnimation];
+    //[self toggleAnimation];
+
+
+    [self registerForDraggedTypes:@[@"com.sdwr.filewatch.drag"]];
 
 
 }
+
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
+
+    [self toggleAnimation];
+
+    return NSDragOperationMove;
+}
+
+
+- (void)draggingEnded:(id<NSDraggingInfo>)sender {
+
+
+}
+
+- (void)draggingExited:(id<NSDraggingInfo>)sender {
+
+    [self toggleAnimation];
+
+}
+
 
 //- (void)drawRect:(NSRect)dirtyRect {
 ////    CGContextRef currentContext = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];

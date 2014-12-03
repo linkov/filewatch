@@ -17,7 +17,7 @@
 
 @end
 
-@protocol JWCTableViewDataSource <NSObject>
+@protocol JWCTableViewDataSource <NSTableViewDataSource>
 
 //Number of rows in section
 -(NSInteger)tableView:(NSTableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -46,6 +46,8 @@
 @property (nonatomic, assign) IBOutlet id <JWCTableViewDelegate> jwcTableViewDelegate;
 
 -(NSIndexPath *)indexPathForView:(NSView *)view;
+
+- (NSString *)objectIDForRow:(NSUInteger)row;
 
 @end
 
