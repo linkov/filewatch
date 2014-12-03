@@ -69,7 +69,7 @@
 
     [self registerForDraggedTypes:@[@"com.sdwr.filewatch.drag"]];
 
-    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.5;
+    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.2;
 
 
 }
@@ -95,7 +95,7 @@
 
     [self.shapeLayer.modelLayer setValue:[self.shapeLayer.presentationLayer valueForKeyPath:@"lineDashPhase"] forKeyPath:@"lineDashPhase"];
 
-    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.5;
+    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.2;
 
     if ([self.shapeLayer animationForKey:@"linePhase"])
         [self.shapeLayer removeAnimationForKey:@"linePhase"];

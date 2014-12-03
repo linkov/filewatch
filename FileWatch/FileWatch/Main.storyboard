@@ -825,14 +825,28 @@
                                     <constraint firstAttribute="height" constant="80" id="czY-6R-ExY"/>
                                 </constraints>
                             </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-fQ-Icm">
+                                <rect key="frame" x="153" y="415" width="154" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="qLu-3g-HdC"/>
+                                    <constraint firstAttribute="height" constant="24" id="tVE-sp-d4v"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop recipe here" id="osV-iu-2Qg">
+                                    <font key="font" metaFont="systemBold" size="18"/>
+                                    <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="KNe-vf-Thb" secondAttribute="bottom" id="203-Zr-Phr"/>
                             <constraint firstAttribute="trailing" secondItem="sHq-CH-Mja" secondAttribute="trailing" constant="15" id="34g-EQ-mLL"/>
                             <constraint firstItem="sHq-CH-Mja" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="Gg6-JY-pgj"/>
                             <constraint firstItem="KNe-vf-Thb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="JAQ-IG-P6P"/>
+                            <constraint firstItem="JbS-fQ-Icm" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="41" id="Ja0-V9-IXA"/>
                             <constraint firstItem="KNe-vf-Thb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sHq-CH-Mja" secondAttribute="bottom" constant="8" id="Y6u-VH-jBf"/>
                             <constraint firstAttribute="centerY" secondItem="sHq-CH-Mja" secondAttribute="centerY" constant="190" id="a1B-2g-jks"/>
+                            <constraint firstAttribute="centerX" secondItem="JbS-fQ-Icm" secondAttribute="centerX" id="dn2-Dw-bAo"/>
                             <constraint firstItem="sHq-CH-Mja" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="15" id="fi1-bO-Sjj"/>
                             <constraint firstAttribute="trailing" secondItem="KNe-vf-Thb" secondAttribute="trailing" id="q5Q-pO-VuZ"/>
                         </constraints>
@@ -850,7 +864,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="1524.5"/>
+            <point key="canvasLocation" x="46" y="1524"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="i5f-Ud-JID">
