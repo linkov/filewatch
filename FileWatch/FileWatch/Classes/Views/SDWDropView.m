@@ -70,9 +70,6 @@
 
     [self.layer addSublayer:self.backgroundLayer];
 
-    //[self toggleAnimation];
-
-
     [self registerForDraggedTypes:@[@"com.sdwr.filewatch.drag"]];
 
 
@@ -87,46 +84,13 @@
 
 
 - (void)draggingEnded:(id<NSDraggingInfo>)sender {
-
-
+    [self toggleAnimation];
 }
 
 - (void)draggingExited:(id<NSDraggingInfo>)sender {
-
     [self toggleAnimation];
 
 }
-
-
-//- (void)drawRect:(NSRect)dirtyRect {
-////    CGContextRef currentContext = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
-////    CGContextSetLineWidth( currentContext, 5.0 );
-////
-//////    CGFloat dashLengths[] = { 20, 30, 40, 30, 20, 10 };
-////
-////    CGContextSetLineDash( currentContext, self.dashPhase, NULL, 0 );
-////
-////    CGPathCreateWithRect(CGRectMake(2.0, 2.0, 100.0, 100.0), NULL);
-////    CGContextStrokeRect(currentContext, CGRectInset(NSRectToCGRect([self bounds]), 3.0, 3.0));
-//
-//
-//
-//    CGContextRef context = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
-//
-//    CGContextSetLineWidth( context, 5.0 );
-//
-//    CGFloat dash[] = {6 ,1}; // pattern 6 times “solid”, 5 times “empty”
-//    CGContextSetLineDash(context,0,dash,2);
-////    CGPathCreateWithRect(CGRectMake(2.0, 2.0, 100.0, 100.0), NULL);
-//
-//
-/////    CGPathCreateWithRoundedRect(CGRectMake(2.0, 2.0, 100.0, 100.0), 16, 16, nil);
-//
-//
-//    CGContextStrokeRect(context, CGRectInset(NSRectToCGRect([self bounds]), 3.0, 3.0));
-//    CGContextStrokePath( context );
-//}
-//
 
 - (void)toggleAnimation {
 
