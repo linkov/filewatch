@@ -669,11 +669,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="SDWMainPanelVC" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="460" height="497"/>
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QmF-C1-cxj">
-                                <rect key="frame" x="49" y="262" width="48" height="48"/>
+                                <rect key="frame" x="49" y="245" width="48" height="48"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="YOU-od-SWE"/>
                             </imageView>
                             <box autoresizesSubviews="NO" boxType="custom" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="KNe-vf-Thb">
@@ -820,20 +820,20 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="sHq-CH-Mja" customClass="SDWDropView">
-                                <rect key="frame" x="80" y="399" width="300" height="80"/>
+                                <rect key="frame" x="15" y="390" width="430" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Xdh-Kp-CuK"/>
                                     <constraint firstAttribute="height" constant="80" id="czY-6R-ExY"/>
                                 </constraints>
                             </customView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="KNe-vf-Thb" secondAttribute="bottom" id="203-Zr-Phr"/>
-                            <constraint firstAttribute="centerX" secondItem="sHq-CH-Mja" secondAttribute="centerX" id="A3P-gS-p2n"/>
+                            <constraint firstAttribute="trailing" secondItem="sHq-CH-Mja" secondAttribute="trailing" constant="15" id="34g-EQ-mLL"/>
+                            <constraint firstItem="sHq-CH-Mja" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="Gg6-JY-pgj"/>
                             <constraint firstItem="KNe-vf-Thb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="JAQ-IG-P6P"/>
-                            <constraint firstItem="KNe-vf-Thb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="150" id="Jtw-7C-Usf"/>
                             <constraint firstItem="KNe-vf-Thb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sHq-CH-Mja" secondAttribute="bottom" constant="8" id="Y6u-VH-jBf"/>
                             <constraint firstAttribute="centerY" secondItem="sHq-CH-Mja" secondAttribute="centerY" constant="190" id="a1B-2g-jks"/>
+                            <constraint firstItem="sHq-CH-Mja" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="15" id="fi1-bO-Sjj"/>
                             <constraint firstAttribute="trailing" secondItem="KNe-vf-Thb" secondAttribute="trailing" id="q5Q-pO-VuZ"/>
                         </constraints>
                     </view>
@@ -878,11 +878,11 @@
             <objects>
                 <viewController id="fJB-vJ-PF8" customClass="SDWLeftMenuVC" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="Hgo-Fo-CFy">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="533"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="482"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="biR-U8-fNV">
-                                <rect key="frame" x="9" y="496" width="178" height="22"/>
+                                <rect key="frame" x="9" y="446" width="178" height="22"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="7Xq-vP-smo">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -890,7 +890,7 @@
                                 </searchFieldCell>
                             </searchField>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="39" horizontalPageScroll="10" verticalLineScroll="39" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLx-fO-pZC">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="491"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="441"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vjo-kG-Oa0">
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -962,7 +962,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="biR-U8-fNV" secondAttribute="trailing" constant="13" id="0gE-uE-LBh"/>
-                            <constraint firstItem="biR-U8-fNV" firstAttribute="top" secondItem="Hgo-Fo-CFy" secondAttribute="top" constant="15" id="8kJ-nl-nsQ"/>
+                            <constraint firstItem="biR-U8-fNV" firstAttribute="top" secondItem="Hgo-Fo-CFy" secondAttribute="top" constant="14" id="8kJ-nl-nsQ"/>
                             <constraint firstAttribute="bottom" secondItem="MLx-fO-pZC" secondAttribute="bottom" id="Q8q-vF-UMd"/>
                             <constraint firstItem="MLx-fO-pZC" firstAttribute="top" secondItem="biR-U8-fNV" secondAttribute="bottom" constant="5" id="Qwc-mD-Fol"/>
                             <constraint firstAttribute="trailing" secondItem="MLx-fO-pZC" secondAttribute="trailing" id="Uvm-Cp-5gT"/>
@@ -976,7 +976,7 @@
                 </viewController>
                 <customObject id="iII-w4-A0h" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-306" y="1524.5"/>
+            <point key="canvasLocation" x="-306" y="1525"/>
         </scene>
     </scenes>
 </document>

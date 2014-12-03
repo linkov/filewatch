@@ -93,6 +93,8 @@
 
 - (void)stopAnimation {
 
+    [self.shapeLayer.modelLayer setValue:[self.shapeLayer.presentationLayer valueForKeyPath:@"lineDashPhase"] forKeyPath:@"lineDashPhase"];
+
     self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.5;
 
     if ([self.shapeLayer animationForKey:@"linePhase"])
