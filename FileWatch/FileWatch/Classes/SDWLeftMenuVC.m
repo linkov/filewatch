@@ -165,4 +165,11 @@
     return @"test";
 }
 
+- (BOOL)objectCanDrag {
+
+    NSLog(@"%@",self.tableView.selectedCell);
+
+    return YES;
+}
+
 @end

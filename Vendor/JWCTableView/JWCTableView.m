@@ -32,18 +32,23 @@
 
 #pragma mark - Drag&Drop
 
-- (NSString *)objectIDForRow:(NSUInteger)row {
-
-    return nil;
-}
+//- (NSString *)objectIDForRow:(NSUInteger)row {
+//
+//    return nil;
+//}
+//
+//- (BOOL)objectCanDrag {
+//
+//    return NO;
+//}
 
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
 {
     // Copy the row numbers to the pasteboard.
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[self objectIDForRow:rowIndexes.firstIndex]];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[_jwcTableViewDelegate objectIDForRow:rowIndexes.firstIndex]];
     //   [pboard declareTypes:[NSArray arrayWithObject:@".gif"] owner:self];
     [pboard setData:data forType:@"com.sdwr.filewatch.drag"];
-    return YES;
+    return [_jwcTableViewDelegate objectCanDrag];
 }
 
 - (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
@@ -57,6 +62,7 @@
 
     return NO;
 }
+
 
 
 #pragma mark NSTableViewDataSource methods

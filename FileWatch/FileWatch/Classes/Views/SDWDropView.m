@@ -93,6 +93,8 @@
 
 - (void)stopAnimation {
 
+    self.shapeLayer.strokeColor = self.backgroundLayer.fillColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
+
     [self.shapeLayer.modelLayer setValue:[self.shapeLayer.presentationLayer valueForKeyPath:@"lineDashPhase"] forKeyPath:@"lineDashPhase"];
 
     self.shapeLayer.strokeColor = self.backgroundLayer.fillColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;

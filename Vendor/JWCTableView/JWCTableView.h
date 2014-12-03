@@ -15,6 +15,9 @@
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectSection:(NSInteger)section;
 
+- (NSString *)objectIDForRow:(NSUInteger)row;
+- (BOOL)objectCanDrag;
+
 @end
 
 @protocol JWCTableViewDataSource <NSTableViewDataSource>
@@ -46,8 +49,6 @@
 @property (nonatomic, assign) IBOutlet id <JWCTableViewDelegate> jwcTableViewDelegate;
 
 -(NSIndexPath *)indexPathForView:(NSView *)view;
-
-- (NSString *)objectIDForRow:(NSUInteger)row;
 
 @end
 
