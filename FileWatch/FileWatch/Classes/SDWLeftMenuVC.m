@@ -8,6 +8,7 @@
 #import "SDWRecipe.h"
 #import "SDWLeftMenuVC.h"
 #import "JWCTableView.h"
+#import "NSColor+Util.h"
 
 @interface SDWLeftMenuVC () <JWCTableViewDataSource, JWCTableViewDelegate>
 @property (strong) IBOutlet JWCTableView *tableView;
@@ -29,6 +30,10 @@
   //  self.items = [self seededRecipies];
 //    self.sections = @[@"Programming",@"General"];
 //    self.content = @{self.sections[0]:[self seededRecipies],self.sections[1]:[self seededRecipiesGeneral]};
+
+    self.tableView.backgroundColor = [NSColor clearColor];
+  //  self.view.wantsLayer = YES;
+//    self.view.layer.backgroundColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
 
     NSMutableArray *keys = [[NSMutableArray alloc] init];
     NSMutableDictionary *contents = [[NSMutableDictionary alloc] init];

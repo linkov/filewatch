@@ -21,6 +21,7 @@
 		F11449371A2E397100A57DEF /* SDWRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449361A2E397100A57DEF /* SDWRecipe.m */; };
 		F114493A1A2E3A2A00A57DEF /* SDWRecipeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449391A2E3A2A00A57DEF /* SDWRecipeCategory.m */; };
 		F114493F1A2E4CBA00A57DEF /* JWCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F114493E1A2E4CBA00A57DEF /* JWCTableView.m */; };
+		F11449431A2E841200A57DEF /* SDWDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = F11449421A2E841200A57DEF /* SDWDropView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		F11449391A2E3A2A00A57DEF /* SDWRecipeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWRecipeCategory.m; sourceTree = "<group>"; };
 		F114493D1A2E4CBA00A57DEF /* JWCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCTableView.h; sourceTree = "<group>"; };
 		F114493E1A2E4CBA00A57DEF /* JWCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCTableView.m; sourceTree = "<group>"; };
+		F11449411A2E841200A57DEF /* SDWDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWDropView.h; sourceTree = "<group>"; };
+		F11449421A2E841200A57DEF /* SDWDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWDropView.m; sourceTree = "<group>"; };
 		F19B85DE1A2D447200072EC2 /* FileWatch.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = FileWatch.entitlements; path = FileWatch/FileWatch.entitlements; sourceTree = SOURCE_ROOT; };
 		F19B85E01A2D449D00072EC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FileWatch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		F19B85E11A2D449D00072EC2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FileWatch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -77,6 +80,15 @@
 				F114493E1A2E4CBA00A57DEF /* JWCTableView.m */,
 			);
 			path = JWCTableView;
+			sourceTree = "<group>";
+		};
+		F11449401A2E83F900A57DEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F11449411A2E841200A57DEF /* SDWDropView.h */,
+				F11449421A2E841200A57DEF /* SDWDropView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F16659F21A1E70AF00A1519D = {
@@ -125,6 +137,7 @@
 		F19B85E51A2D449D00072EC2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F11449401A2E83F900A57DEF /* Views */,
 				F19B85E61A2D449D00072EC2 /* Models */,
 				F19B85E91A2D449D00072EC2 /* SDWMainPanelVC.h */,
 				F19B85EA1A2D449D00072EC2 /* SDWMainPanelVC.m */,
@@ -235,6 +248,7 @@
 				F11449371A2E397100A57DEF /* SDWRecipe.m in Sources */,
 				F11449241A2D47F900A57DEF /* NSImage+HHTint.m in Sources */,
 				F11449251A2D47F900A57DEF /* main.m in Sources */,
+				F11449431A2E841200A57DEF /* SDWDropView.m in Sources */,
 				F11449261A2D47F900A57DEF /* SDWMatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

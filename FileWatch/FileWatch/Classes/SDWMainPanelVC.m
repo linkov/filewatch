@@ -23,6 +23,8 @@
 @property (strong) IBOutlet NSTextField *amberField;
 @property (strong) IBOutlet NSTextField *redField;
 @property (strong) IBOutlet NSTextField *extensionField;
+@property (strong) IBOutlet NSBox *recipeDropBox;
+@property (strong) IBOutlet NSBox *lowerBackground;
 
 @end
 
@@ -32,6 +34,15 @@
 
     [super viewDidLoad];
     [self setupTopMenu];
+
+   // self.lowerBackground.fillColor = [NSColor colorWithHexColorString:@"95b5c2"];
+   // self.lowerBackground.cornerRadius = 4;
+    self.lowerBackground.borderColor = [NSColor clearColor];
+
+ //   self.view.wantsLayer = YES;
+//    self.view.layer.backgroundColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
+
+
 }
 
 - (void)setupTopMenu {
@@ -122,8 +133,6 @@
         {
 
             if ([file.pathExtension isEqualToString:self.extensionField.stringValue]) {
-
-
 
                 NSString * fileAsString = [NSString stringWithContentsOfURL:file encoding:NSUTF8StringEncoding error:nil];
 
