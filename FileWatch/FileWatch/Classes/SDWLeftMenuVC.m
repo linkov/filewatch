@@ -140,7 +140,8 @@
     NSTableCellView *resultView = [tableView makeViewWithIdentifier:@"cellView" owner:self];
 
     resultView.textField.stringValue = [[self sectionKeys] objectAtIndex:section];
-    resultView.textField.textColor = [NSColor blackColor];
+    resultView.textField.textColor = [NSColor colorWithHexColorString:@"033649"];
+    resultView.textField.font = [NSFont boldSystemFontOfSize:16];
 
     return resultView;
 }

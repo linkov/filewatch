@@ -69,7 +69,7 @@
 
     [self registerForDraggedTypes:@[@"com.sdwr.filewatch.drag"]];
 
-    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.2;
+    self.shapeLayer.strokeColor = self.backgroundLayer.fillColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
 
 
 }
@@ -95,7 +95,7 @@
 
     [self.shapeLayer.modelLayer setValue:[self.shapeLayer.presentationLayer valueForKeyPath:@"lineDashPhase"] forKeyPath:@"lineDashPhase"];
 
-    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.2;
+    self.shapeLayer.strokeColor = self.backgroundLayer.fillColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
 
     if ([self.shapeLayer animationForKey:@"linePhase"])
         [self.shapeLayer removeAnimationForKey:@"linePhase"];
@@ -103,8 +103,7 @@
 
 - (void)startAnimation {
 
-
-    self.shapeLayer.opacity = self.backgroundLayer.opacity  = 1.0;
+    self.shapeLayer.strokeColor = self.backgroundLayer.fillColor = [NSColor colorWithHexColorString:@"033649"].CGColor;
 
         CABasicAnimation *dashAnimation;
         dashAnimation = [CABasicAnimation

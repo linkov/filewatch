@@ -35,9 +35,10 @@
     [super viewDidLoad];
     [self setupTopMenu];
 
-   // self.lowerBackground.fillColor = [NSColor colorWithHexColorString:@"95b5c2"];
-   // self.lowerBackground.cornerRadius = 4;
-    self.lowerBackground.borderColor = [NSColor clearColor];
+    self.lowerBackground.fillColor = [NSColor colorWithHexColorString:@"d5dbdf"];
+    self.lowerBackground.cornerRadius = 4;
+    self.lowerBackground.borderWidth = 3;
+    self.lowerBackground.borderColor = [NSColor colorWithHexColorString:@"95b5c2"];
 
  //   self.view.wantsLayer = YES;
 //    self.view.layer.backgroundColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
