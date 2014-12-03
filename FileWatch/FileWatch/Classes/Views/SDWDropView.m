@@ -42,9 +42,6 @@
     [self.shapeLayer setLineWidth:3.0f];
     [self.shapeLayer setLineJoin:kCALineJoinRound];
 
-  //  [self.shapeLayer setFillRule:kCAFillRuleEvenOdd];
-  //  [self.shapeLayer setFillMode:@"kCAFillRuleEvenOdd"];
-
     [self.shapeLayer setLineDashPattern:
 
      [NSArray arrayWithObjects:[NSNumber numberWithInt:10],
@@ -72,31 +69,41 @@
 
     [self registerForDraggedTypes:@[@"com.sdwr.filewatch.drag"]];
 
+    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.5;
+
 
 }
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
 
-    [self toggleAnimation];
+    [self startAnimation];
 
     return NSDragOperationMove;
 }
 
 
 - (void)draggingEnded:(id<NSDraggingInfo>)sender {
-    [self toggleAnimation];
+    [self stopAnimation];
 }
 
 - (void)draggingExited:(id<NSDraggingInfo>)sender {
-    [self toggleAnimation];
+    [self stopAnimation];
 
 }
 
-- (void)toggleAnimation {
+- (void)stopAnimation {
+
+    self.shapeLayer.opacity = self.backgroundLayer.opacity = 0.5;
 
     if ([self.shapeLayer animationForKey:@"linePhase"])
         [self.shapeLayer removeAnimationForKey:@"linePhase"];
-    else {
+}
+
+- (void)startAnimation {
+
+
+    self.shapeLayer.opacity = self.backgroundLayer.opacity  = 1.0;
+
         CABasicAnimation *dashAnimation;
         dashAnimation = [CABasicAnimation
                          animationWithKeyPath:@"lineDashPhase"];
@@ -107,8 +114,6 @@
         [dashAnimation setRepeatCount:10000];
 
         [self.shapeLayer addAnimation:dashAnimation forKey:@"linePhase"];
-        
-    }
 }
 
 
