@@ -9,6 +9,7 @@
 #import "NSImage+HHTint.h"
 #import "SDWMainPanelVC.h"
 #import "NSColor+Util.h"
+#import "SDWRecipe.h"
 
 @interface SDWMainPanelVC ()
 
@@ -40,12 +41,32 @@
     self.lowerBackground.borderWidth = 3;
     self.lowerBackground.borderColor = [NSColor colorWithHexColorString:@"95b5c2"];
 
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"com.sdwr.filewatch.didSelectRecipe"
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note)
+    {
+
+        [self loadRecipe:note.userInfo[@"recipe"]];
+
+    }];
+
     /*test recipe setup*/
 //    self.regexField.stringValue = @"viewDidLoad";
 //    self.offField.intValue = 0;
 //    self.amberField.intValue = 3;
 //    self.redField.intValue = 9;
 //    self.extensionField.stringValue = @"m";
+
+}
+
+- (void)loadRecipe:(SDWRecipe *)recipe {
+
+    self.regexField.stringValue = recipe.regex;
+    self.offField.integerValue = recipe.offLimit;
+    self.amberField.integerValue = recipe.amberLimit;
+    self.redField.integerValue = recipe.redLimit;
+    self.extensionField.stringValue = recipe.fileExtension;
 
 }
 
@@ -217,6 +238,11 @@
 
 - (void)updateMenuItemForCount:(NSUInteger)count {
 
+    if (count == 0) {
+        self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor blackColor]];
+        return;
+    }
+
     if (count >= [self.offField.stringValue integerValue] && count < [self.amberField.stringValue integerValue]) {
         self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor blackColor]];
     }
@@ -230,6 +256,9 @@
         self.statusItem.image = [self.statusItem.image bwTintedImageWithColor:[NSColor colorWithHexColorString:@"C00000"]];
 
     }
+}
+- (IBAction)saveChanges:(id)sender {
+    
 }
 
 @end

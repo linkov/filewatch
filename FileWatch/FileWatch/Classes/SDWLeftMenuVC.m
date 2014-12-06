@@ -66,7 +66,7 @@
     curlies.amberLimit = 3;
     curlies.redLimit = 9;
     curlies.fileExtension = @"m";
-    curlies.regex = @"viewDidLoad";
+    curlies.regex = @"(-.+seededRecipiesGeneral)";
 
     NSArray *recipes = @[curlies];
 
@@ -96,6 +96,9 @@
     NSString *key = [[self sectionKeys] objectAtIndex:[indexPath section]];
     NSArray *contents = [[self sectionContents] objectForKey:key];
     SDWRecipe *recipe = [contents objectAtIndex:[indexPath row]];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"com.sdwr.filewatch.didSelectRecipe"
+                                                        object:nil userInfo:@{@"recipe":recipe}];
 
     NSLog(@"Selected recipe - %@",recipe);
 

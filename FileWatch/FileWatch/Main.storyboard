@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -805,15 +805,28 @@
                                                 <constraint firstAttribute="height" constant="280" id="92z-vL-psn"/>
                                             </constraints>
                                         </customView>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-uR-8cs">
+                                            <rect key="frame" x="321" y="8" width="122" height="19"/>
+                                            <buttonCell key="cell" type="roundRect" title="Save" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oBU-w2-lkO">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="controlContent"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="saveChanges:" target="XfG-lQ-9wD" id="6w4-8Y-Qu8"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="TZE-og-V0D" firstAttribute="leading" secondItem="7Zj-pU-VvL" secondAttribute="trailing" constant="12" id="1JG-wp-M6L"/>
+                                    <constraint firstItem="W2h-uR-8cs" firstAttribute="leading" secondItem="7Zj-pU-VvL" secondAttribute="trailing" constant="51" id="B51-JQ-RX8"/>
+                                    <constraint firstAttribute="trailing" secondItem="W2h-uR-8cs" secondAttribute="trailing" constant="16" id="BP1-LC-QfA"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TZE-og-V0D" secondAttribute="bottom" constant="10" id="Ix5-5y-Xjv"/>
                                     <constraint firstItem="7Zj-pU-VvL" firstAttribute="top" secondItem="KNe-vf-Thb" secondAttribute="top" constant="38" id="Qtu-nV-9ti"/>
                                     <constraint firstAttribute="bottom" secondItem="7Zj-pU-VvL" secondAttribute="bottom" constant="10" id="dOM-rl-Xi1"/>
                                     <constraint firstItem="7Zj-pU-VvL" firstAttribute="leading" secondItem="KNe-vf-Thb" secondAttribute="leading" id="r7Y-Dp-sWk"/>
                                     <constraint firstItem="TZE-og-V0D" firstAttribute="top" secondItem="KNe-vf-Thb" secondAttribute="top" constant="47" id="xPg-xE-R4p"/>
+                                    <constraint firstItem="W2h-uR-8cs" firstAttribute="top" secondItem="TZE-og-V0D" secondAttribute="bottom" constant="144" id="xag-jB-jcH"/>
                                     <constraint firstAttribute="trailing" secondItem="7Zj-pU-VvL" secondAttribute="trailing" constant="189" id="zMd-v0-p79"/>
                                 </constraints>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -910,7 +923,6 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="37" rowSizeStyle="automatic" viewBased="YES" id="lyi-P6-1Y5" customClass="JWCTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="238" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -965,7 +977,7 @@
                                     <constraint firstAttribute="width" constant="200" id="RGn-YF-ppR"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="22R-cE-bIc">
-                                    <rect key="frame" x="1" y="117.54218375682831" width="236.98964691162109" height="16"/>
+                                    <rect key="frame" x="1" y="117.54218375682831" width="237" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="QbF-Qt-HA9">
