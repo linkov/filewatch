@@ -15,8 +15,7 @@
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectSection:(NSInteger)section;
 
-- (NSString *)objectIDForRow:(NSUInteger)row;
-- (BOOL)objectCanDrag;
+- (BOOL)_jwcTableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard;
 
 @end
 
@@ -49,6 +48,7 @@
 @property (nonatomic, assign) IBOutlet id <JWCTableViewDelegate> jwcTableViewDelegate;
 
 -(NSIndexPath *)indexPathForView:(NSView *)view;
+-(NSInteger)tableView:(NSTableView *)tableView getSectionFromRow:(NSInteger)row isSection:(BOOL *)isSection;
 
 @end
 

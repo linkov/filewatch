@@ -40,9 +40,12 @@
     self.lowerBackground.borderWidth = 3;
     self.lowerBackground.borderColor = [NSColor colorWithHexColorString:@"95b5c2"];
 
- //   self.view.wantsLayer = YES;
-//    self.view.layer.backgroundColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
-
+    /*test recipe setup*/
+//    self.regexField.stringValue = @"viewDidLoad";
+//    self.offField.intValue = 0;
+//    self.amberField.intValue = 3;
+//    self.redField.intValue = 9;
+//    self.extensionField.stringValue = @"m";
 
 }
 
@@ -51,8 +54,8 @@
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     _statusItem.title = @"";
 
-    _statusItem.image = [NSImage imageNamed:@"menuItem"];
-    _statusItem.alternateImage = [NSImage imageNamed:@"menuItemWhite"];
+    _statusItem.image = [NSImage imageNamed:@"menuItemLens"];
+    _statusItem.alternateImage = [NSImage imageNamed:@"menuItemLensWhite"];
     _statusItem.highlightMode = YES;
 
     NSMenu *menu = [[NSMenu alloc] init];
@@ -155,7 +158,7 @@
                         for (index = 0, numberOfLines = 0; index < stringLength; numberOfLines++) {
 
                             index = NSMaxRange([fileAsString lineRangeForRange:NSMakeRange(index, 0)]);
-                            NSLog(@"index - %lu",(unsigned long)index);
+                            //NSLog(@"index - %lu",(unsigned long)index);
 
                         }
 

@@ -18,7 +18,7 @@
 
 @property (strong) NSString *name;
 @property (strong) NSString *fileExtension;
-
+@property (strong) NSString *regex;
 @property (weak) SDWRecipeCategory *category;
 
 @end

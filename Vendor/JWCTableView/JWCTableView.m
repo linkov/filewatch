@@ -44,24 +44,20 @@
 
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
 {
-    // Copy the row numbers to the pasteboard.
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[_jwcTableViewDelegate objectIDForRow:rowIndexes.firstIndex]];
-    //   [pboard declareTypes:[NSArray arrayWithObject:@".gif"] owner:self];
-    [pboard setData:data forType:@"com.sdwr.filewatch.drag"];
-    return [_jwcTableViewDelegate objectCanDrag];
+
+    return [_jwcTableViewDelegate _jwcTableView:tv writeRowsWithIndexes:rowIndexes toPasteboard:pboard];
 }
 
-- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
-
-    return NSDragOperationNone;
-}
-
+//- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
 //
-- (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id <NSDraggingInfo>)info
-              row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation {
+//    return NSDragOperationNone;
+//}
 
-    return NO;
-}
+//- (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id <NSDraggingInfo>)info
+//              row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation {
+//
+//    return NO;
+//}
 
 
 

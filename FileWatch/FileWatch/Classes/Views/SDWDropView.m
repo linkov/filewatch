@@ -18,12 +18,16 @@
 @property (strong) CAShapeLayer *shapeLayer;
 @property (strong) CAShapeLayer *backgroundLayer;
 
+@property BOOL canPerformAction;
+
 @end
 
 @implementation SDWDropView
 
 
 - (void)awakeFromNib {
+
+    self.canPerformAction = NO;
 
     self.patternRectangle = [self bounds];
     self.dashPhase = 5;
@@ -78,16 +82,29 @@
 
     [self startAnimation];
 
+    self.canPerformAction = YES;
+
     return NSDragOperationMove;
 }
 
 
 - (void)draggingEnded:(id<NSDraggingInfo>)sender {
     [self stopAnimation];
+
+    if (self.canPerformAction) {
+
+        NSPasteboard *pBoard = [sender draggingPasteboard];
+        NSData *data = [pBoard dataForType:@"com.sdwr.filewatch.drag"];
+
+        NSDictionary *recipeDict = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        NSLog(@"recipe dict - %@",recipeDict);
+    }
 }
 
 - (void)draggingExited:(id<NSDraggingInfo>)sender {
     [self stopAnimation];
+
+    self.canPerformAction = NO;
 
 }
 

@@ -61,11 +61,12 @@
 - (NSArray *)seededRecipiesGeneral {
 
     SDWRecipe *curlies = [SDWRecipe new];
-    curlies.name = @"Curly brackets should start on the same line as method name";
+    curlies.name = @"viewDidLoad in all files";
     curlies.offLimit = 1;
     curlies.amberLimit = 3;
     curlies.redLimit = 9;
     curlies.fileExtension = @"m";
+    curlies.regex = @"viewDidLoad";
 
     NSArray *recipes = @[curlies];
 
@@ -80,7 +81,7 @@
     curlies.amberLimit = 3;
     curlies.redLimit = 9;
     curlies.fileExtension = @"m";
-
+    curlies.regex = @"viewDidLoad";
     NSArray *recipes = @[curlies,curlies];
 
     return recipes;
@@ -90,16 +91,20 @@
 #pragma mark - JWCTableViewDataSource, JWCTableViewDelegate
 
 
--(BOOL)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"Selected section %ld, row %ld",(long)indexPath.section,(long)indexPath.row);
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSString *key = [[self sectionKeys] objectAtIndex:[indexPath section]];
+    NSArray *contents = [[self sectionContents] objectForKey:key];
+    SDWRecipe *recipe = [contents objectAtIndex:[indexPath row]];
+
+    NSLog(@"Selected recipe - %@",recipe);
+
     return YES;
 }
 
--(BOOL)tableView:(NSTableView *)tableView shouldSelectSection:(NSInteger)section
-{
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectSection:(NSInteger)section {
     NSLog(@"Selected section header for section %ld", (long)section);
-    return YES;
+    return NO;
 }
 
 
@@ -152,7 +157,6 @@
     NSArray *contents = [[self sectionContents] objectForKey:key];
     SDWRecipe *recipe = [contents objectAtIndex:[indexPath row]];
 
-
     NSTableCellView *resultView = [tableView makeViewWithIdentifier:@"cellView" owner:self];
     resultView.textField.stringValue = recipe.name;
     resultView.textField.textColor = [NSColor darkGrayColor];
@@ -160,16 +164,41 @@
     return resultView;
 }
 
-- (NSString *)objectIDForRow:(NSUInteger)row {
 
-    return @"test";
-}
+/* recipe drag and drop combinator */
 
-- (BOOL)objectCanDrag {
-
-    NSLog(@"%@",self.tableView.selectedCell);
-
-    return YES;
-}
+//- (BOOL)_jwcTableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard *)pboard {
+//
+//    BOOL rowIsSectionHeader = NO;
+//    NSInteger section = [self.tableView tableView:self.tableView getSectionFromRow:rowIndexes.firstIndex isSection:&rowIsSectionHeader];
+//
+//    if (rowIsSectionHeader == YES) {
+//        return NO;
+//    }
+//
+//    NSIndexPath *inx = [NSIndexPath indexPathForRow:rowIndexes.firstIndex inSection:section];
+//
+//    NSString *key = [[self sectionKeys] objectAtIndex:section];
+//    NSArray *contents = [[self sectionContents] objectForKey:key];
+//    SDWRecipe *recipe = [contents objectAtIndex:inx.row];
+//
+//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@{@"name":recipe.name}];
+//    [pboard setData:data forType:@"com.sdwr.filewatch.drag"];
+//
+//    return YES;
+//
+////    if (rowIsSectionHeader == YES)
+////    {
+////        view = [self.jwcTableViewDataSource tableView:tableView
+////                               viewForHeaderInSection:section];
+////    }
+////    else
+////    {
+////        NSIndexPath *indexPath = [self.tableView tableView:self.tableView
+////                                 indexPathForRow:row];
+////
+////        view = [self.jwcTableViewDataSource tableView:tableView viewForIndexPath:indexPath];
+////    }
+//}
 
 @end
