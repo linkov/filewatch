@@ -32,8 +32,7 @@
 //    self.content = @{self.sections[0]:[self seededRecipies],self.sections[1]:[self seededRecipiesGeneral]};
 
     self.tableView.backgroundColor = [NSColor clearColor];
-  //  self.view.wantsLayer = YES;
-//    self.view.layer.backgroundColor = [NSColor colorWithHexColorString:@"d5dbdf"].CGColor;
+
 
     NSMutableArray *keys = [[NSMutableArray alloc] init];
     NSMutableDictionary *contents = [[NSMutableDictionary alloc] init];
@@ -56,7 +55,11 @@
 
 }
 
+- (void)viewWillAppear {
 
+    self.view.wantsLayer = YES;
+    self.view.layer.backgroundColor = [NSColor colorWithHexColorString:@"033649"].CGColor;
+}
 
 - (NSArray *)seededRecipiesGeneral {
 
@@ -148,7 +151,7 @@
     NSTableCellView *resultView = [tableView makeViewWithIdentifier:@"cellView" owner:self];
 
     resultView.textField.stringValue = [[self sectionKeys] objectAtIndex:section];
-    resultView.textField.textColor = [NSColor colorWithHexColorString:@"033649"];
+    resultView.textField.textColor = [NSColor colorWithHexColorString:@"95b5c2"];
     resultView.textField.font = [NSFont boldSystemFontOfSize:16];
 
     return resultView;
@@ -162,7 +165,7 @@
 
     NSTableCellView *resultView = [tableView makeViewWithIdentifier:@"cellView" owner:self];
     resultView.textField.stringValue = recipe.name;
-    resultView.textField.textColor = [NSColor darkGrayColor];
+    resultView.textField.textColor = [NSColor lightGrayColor];
 
     return resultView;
 }
